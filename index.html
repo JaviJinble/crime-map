@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>경찰청 범죄발생지역별 통계</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Chart.js 라이브러리 -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>경찰청 범죄발생지역별 통계</h1>
+  <div id="controls">
+    <!-- 연도를 순서대로 정렬 -->
+    <button onclick="loadData('2012')">2012</button>
+    <button onclick="loadData('2013')">2013</button>
+    <button onclick="loadData('2014')">2014</button>
+    <button onclick="loadData('2015')">2015</button>
+    <button onclick="loadData('2016')">2016</button>
+    <button onclick="loadData('2017')">2017</button>
+    <button onclick="loadData('2018')">2018</button>
+    <button onclick="loadData('2019')">2019</button>
+    <button onclick="loadData('2020')">2020</button>
+    <button onclick="loadData('2021')">2021</button>
+    <button onclick="loadData('2022')">2022</button>
+    <button onclick="loadData('2023')">2023</button>
+  </div>
+
+  <div id="map"></div>
+
+  <!-- 차트를 표시할 영역 -->
+  <div id="chartContainer" style="width: 80%; margin: 20px auto;">
+    <canvas id="crimeChart"></canvas>
+  </div>
+
+  <!-- Kakao Maps SDK -->
+  <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=a92b2e8207a0207090f632e3200411e1"></script>
+  <!-- Custom Script -->
+  <script src="js/script.js"></script>
+</body>
+</html>
